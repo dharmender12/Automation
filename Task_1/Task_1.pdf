@@ -1,0 +1,119 @@
+# Make.com Automation: Daily Company Summary Report
+
+## Scenario Overview
+This automation retrieves contact data from Airtable, generates a summary for each company (simulated ChatGPT output), creates a Google Doc with the company name and summary, and sends the report to a Slack channel every day at 7:00 AM.
+
+## Data Provided
+| Row | Name            | Email                          | Company Name     |
+|-----|-----------------|--------------------------------|------------------|
+| 1   | Samantha Lee    | samantha.lee@outreachify.com   | Outreachify      |
+| 2   | David Kim       | david.kim@techspire0cd7.io     | Techspire        |
+| 3   | Priya Nair      | priya.nair@finoptics2a39.io    | FinOptics        |
+| 4   | Marcus Chen     | marcus.chen@cloudvertising.com | Cloudvertise     |
+| 5   | Elena Garcia    | elena.garcia@medialogicd.com   | MediaLogic       |
+| 6   | James O'Connor  | james.o'connor@bluepeak.ai     | BluePeak AI      |
+
+## Make.com Scenario Steps
+
+### 1. Schedule the Automation
+- **Module**: Scheduler
+- **Configuration**:
+  - Set to run daily at 7:00 AM in the desired timezone.
+  - Use the "Daily" schedule option in Make.com.
+
+### 2. Retrieve Data from Airtable
+- **Module**: Airtable > Search Records
+- **Configuration**:
+  - Connect to the Airtable base containing the contact data.
+  - Table: Select the table (e.g., "Contacts").
+  - Fields: Select `Name`, `Email`, `Company Name`.
+  - Output: All records (no filter needed unless you want to limit the data).
+
+### 3. Generate Company Summaries (Simulated ChatGPT)
+- **Module**: HTTP > Make an API Request (to simulate ChatGPT via an API like OpenAI’s)
+- **Configuration**:
+  - **URL**: `https://api.openai.com/v1/chat/completions` (or equivalent ChatGPT API endpoint).
+  - **Method**: POST
+  - **Headers**:
+    - Authorization: `Bearer {{your_openai_api_key}}`
+    - Content-Type: `application/json`
+  - **Body**:
+    ```json
+    {
+      "model": "gpt-3.5-turbo",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Generate a brief summary (50-100 words) of the company {{Company Name}}."
+        }
+      ]
+    }
+    ```
+  - **Loop**: Iterate over each Airtable record to generate a summary for each `Company Name`.
+  - **Simulated Summaries** (since I can’t call ChatGPT directly):
+    - **Outreachify**: A digital marketing firm specializing in personalized email outreach campaigns to boost client engagement.
+    - **Techspire**: An innovative tech startup focused on AI-driven solutions for enterprise automation and efficiency.
+    - **FinOptics**: A fintech company offering advanced analytics for optimizing financial portfolios and risk management.
+    - **Cloudvertise**: A cloud-based advertising platform that leverages data analytics for targeted marketing.
+    - **MediaLogic**: A media consultancy providing strategic solutions for content creation and distribution.
+    - **BluePeak AI**: A leader in AI research, developing cutting-edge algorithms for predictive analytics.
+
+### 4. Create a Google Doc
+- **Module**: Google Docs > Create a Document
+- **Configuration**:
+  - Document Name: `Daily Company Summary Report - {{current_date}}`
+  - Content:
+    ```markdown
+    # Daily Company Summary Report
+    {{current_date}}
+
+    {{for each company in Airtable records}}
+    ## {{Company Name}}
+    {{Simulated ChatGPT Summary}}
+    {{end loop}}
+    ```
+  - Example Output Content:
+    ```markdown
+    # Daily Company Summary Report
+    September 19, 2025
+
+    ## Outreachify
+    A digital marketing firm specializing in personalized email outreach campaigns to boost client engagement.
+
+    ## Techspire
+    An innovative tech startup focused on AI-driven solutions for enterprise automation and efficiency.
+
+    ## FinOptics
+    A fintech company offering advanced analytics for optimizing financial portfolios and risk management.
+
+    ## Cloudvertise
+    A cloud-based advertising platform that leverages data analytics for targeted marketing.
+
+    ## MediaLogic
+    A media consultancy providing strategic solutions for content creation and distribution.
+
+    ## BluePeak AI
+    A leader in AI research, developing cutting-edge algorithms for predictive analytics.
+    ```
+
+### 5. Send Report to Slack
+- **Module**: Slack > Send a Message
+- **Configuration**:
+  - Connect to the Slack workspace and select the target channel (e.g., `#reports`).
+  - Message:
+    ```markdown
+    📊 *Daily Company Summary Report* - {{current_date}}
+    The report has been generated and is available in Google Docs: {{Google Doc URL}}
+    ```
+  - Attach the Google Doc URL from the previous module’s output.
+
+## Notes
+- **API Key**: Ensure you have an OpenAI API key for ChatGPT integration. Store it securely in Make.com’s connection settings.
+- **Error Handling**: Add an error handler module to notify you (e.g., via Slack or email) if the API call or Google Doc creation fails.
+- **Timezone**: Verify the scheduler’s timezone matches your requirement for 7:00 AM.
+- **Airtable Schema**: Ensure the Airtable table has columns `Name`, `Email`, and `Company Name` exactly as specified.
+- **Permissions**: Grant Make.com access to Airtable, Google Docs, and Slack via their respective APIs.
+
+## Expected Output
+- Every day at 7:00 AM, a Google Doc is created with the company names and their summaries.
+- A Slack message is sent to the specified channel with a link to the Google Doc.
