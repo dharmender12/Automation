@@ -38,7 +38,7 @@ Repository Structure
 - Google Docs containing company summaries.
 - Slack messages with daily reports.
 - Report: docs/Make_Airtable_Automation_Report.md (to be provided).
-
+------
 ### Task 2: YouTube Scraper
 
 Objective
