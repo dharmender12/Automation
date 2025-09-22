@@ -1,5 +1,5 @@
 ## Developer Recruitment Tasks
-
+----
 This repository contains the solutions for three developer recruitment tasks, demonstrating skills in web scraping, automation, and bot development. Each task has been implemented and tested, with artifacts stored in structured formats as specified. Below is an overview of each task, along with setup and execution instructions.
 Repository Structure
 
