@@ -18,20 +18,20 @@ Repository Structure
 
 #### Task 1: Make.com Automation with Airtable, ChatGPT, Google Docs, and Slack
 ##### Objective
- - Create an automation in Make.com that:
+  - Create an automation in Make.com that:
   - Generates a list of random contacts in Airtable with Name, Email, and Company Name.
   - Uses ChatGPT to generate a company summary.
   - Stores the summary in a Google Doc with the company name and summary text.
   - Sends a daily report to a Slack channel at 7:00 AM.
- 
+-------- 
 
-Implementation
+##### Implementation
 
-Airtable: A table was created to store random contacts with fields for Name, Email, and Company Name.
-ChatGPT: Integrated via Make.com to generate a summary for each company.
-Google Docs: A new document is created for each company summary, containing the company name and summary text.
-Slack: A daily report is sent to a specified Slack channel at 7:00 AM IST, summarizing the contacts and company details.
-Make.com: A scenario was set up to automate the process, triggered daily via a scheduler.
+- Airtable: A table was created to store random contacts with fields for Name, Email, and Company Name.
+- ChatGPT: Integrated via Make.com to generate a summary for each company.
+- Google Docs: A new document is created for each company summary, containing the company name and summary text.
+- Slack: A daily report is sent to a specified Slack channel at 7:00 AM IST, summarizing the contacts and company details.
+- Make.com: A scenario was set up to automate the process, triggered daily via a scheduler.
 
 Artifacts
 
