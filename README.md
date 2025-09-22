@@ -33,14 +33,14 @@ Repository Structure
 - Slack: A daily report is sent to a specified Slack channel at 7:00 AM IST, summarizing the contacts and company details.
 - Make.com: A scenario was set up to automate the process, triggered daily via a scheduler.
 
-Artifacts
+##### Artifacts
+- Airtable base with contact data.
+- Google Docs containing company summaries.
+- Slack messages with daily reports.
+- Report: docs/Make_Airtable_Automation_Report.md (to be provided).
 
-Airtable base with contact data.
-Google Docs containing company summaries.
-Slack messages with daily reports.
-Report: docs/Make_Airtable_Automation_Report.md (to be provided).
+### Task 2: YouTube Scraper
 
-Task 2: YouTube Scraper
 Objective
 Develop a scraper to extract YouTube video details (title, channel name, description, publish date, view count) and store them in JSON, Excel, and Google Sheets.
 Implementation
