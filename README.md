@@ -40,16 +40,15 @@ Repository Structure
 - Report: docs/Make_Airtable_Automation_Report.md (to be provided).
 ------
 ### Task 2: YouTube Scraper
+##### Objective
 
-Objective
 Develop a scraper to extract YouTube video details (title, channel name, description, publish date, view count) and store them in JSON, Excel, and Google Sheets.
-Implementation
-
-YouTube Data API: Used to fetch video metadata.
-Storage:
-JSON file (youtube_data.json) for raw data.
-Excel file (youtube_data.xlsx) for tabular data.
-Google Sheets for online access and collaboration.
+- Implementation
+- YouTube Data API: Used to fetch video metadata.
+- Storage:
+  - JSON file (youtube_data.json) for raw data.
+  - Excel file (youtube_data.xlsx) for tabular data.
+  - Google Sheets for online access and collaboration.
 
 
 Error Handling: Managed API quotas, invalid video IDs, and data formatting issues.
