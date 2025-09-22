@@ -14,8 +14,7 @@ Repository Structure
 - YouTube_Scraper_Report.md
 - Slack_Bot_Report.md
 - Make_Airtable_Automation_Report.md (to be generated separately)
-
-
+-----
 
 Task 1: Make.com Automation with Airtable, ChatGPT, Google Docs, and Slack
 Objective
