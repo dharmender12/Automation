@@ -16,9 +16,9 @@ Repository Structure
 - Make_Airtable_Automation_Report.md (to be generated separately)
 -----
 
-Task 1: Make.com Automation with Airtable, ChatGPT, Google Docs, and Slack
-Objective
-Create an automation in Make.com that:
+- Task 1: Make.com Automation with Airtable, ChatGPT, Google Docs, and Slack
+  - Objective
+  - Create an automation in Make.com that:
 
 Generates a list of random contacts in Airtable with Name, Email, and Company Name.
 Uses ChatGPT to generate a company summary.
