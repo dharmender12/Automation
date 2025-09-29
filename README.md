@@ -55,10 +55,11 @@ Develop a scraper to extract YouTube video details (title, channel name, descrip
 - Error Handling: Managed API quotas, invalid video IDs, and data formatting issues.
 - Artifacts
 
-youtube_data.json: Raw data in JSON format.
-youtube_data.xlsx: Structured data in Excel format.
-Google Sheet with video details.
-Report: docs/YouTube_Scraper_Report.md.
+- youtube_data.json: Raw data in JSON format.
+- youtube_data.xlsx: Structured data in Excel format.
+- Google Sheet with video details.
+- Report: docs/YouTube_Scraper_Report.md.
+-----
 
 Task 3: Slack Bot with Make.com Integration
 Objective
