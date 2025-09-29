@@ -50,10 +50,10 @@ Develop a scraper to extract YouTube video details (title, channel name, descrip
   - Excel file (youtube_data.xlsx) for tabular data.
   - Google Sheets for online access and collaboration.
 
+-------
 
-Error Handling: Managed API quotas, invalid video IDs, and data formatting issues.
-
-Artifacts
+- Error Handling: Managed API quotas, invalid video IDs, and data formatting issues.
+- Artifacts
 
 youtube_data.json: Raw data in JSON format.
 youtube_data.xlsx: Structured data in Excel format.
