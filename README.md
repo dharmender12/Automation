@@ -71,16 +71,15 @@ Develop a scraper to extract YouTube video details (title, channel name, descrip
 - Positive Replies: 12
 
 ##### Implementation
-
-Slack Bot: Created "Report Bot" using the Slack API with chat:write permissions.
-Make.com: Configured a scenario to trigger weekly, sending the report with the exact metrics provided.
-Private Channel: Ensured the bot was invited to the target channel for message delivery.
-
+- Slack Bot: Created "Report Bot" using the Slack API with chat:write permissions.
+- Make.com: Configured a scenario to trigger weekly, sending the report with the exact metrics provided.
+- Private Channel: Ensured the bot was invited to the target channel for message delivery.
+-------
 Artifacts
 
-Slack bot ("Report Bot") configured and operational.
-Make.com scenario for weekly report automation.
-Report: docs/Slack_Bot_Report.md.
+- Slack bot ("Report Bot") configured and operational.
+- Make.com scenario for weekly report automation.
+- Report: docs/Slack_Bot_Report.md.
 
 
 
