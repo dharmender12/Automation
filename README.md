@@ -76,7 +76,7 @@ Develop a scraper to extract YouTube video details (title, channel name, descrip
 - Make.com: Configured a scenario to trigger weekly, sending the report with the exact metrics provided.
 - Private Channel: Ensured the bot was invited to the target channel for message delivery.
 -------
-Artifacts
+#### Artifacts
 
 - Slack bot ("Report Bot") configured and operational.
 - Make.com scenario for weekly report automation.
