@@ -63,7 +63,7 @@ Develop a scraper to extract YouTube video details (title, channel name, descrip
 -----
 
 #### Task 3: Slack Bot with Make.com Integration
-- Objective
+###### Objective
 - Create a Slack bot named "Report Bot" and connect it to Make.com to send weekly reports to a private Slack channel with the format:
 - Weekly Report:
 - Leads Contacted: 2345
