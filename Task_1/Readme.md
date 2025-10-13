@@ -1,3 +1,2 @@
 ## Daily Company Summary Automation
 This repository contains a Make.com automation scenario that streamlines the process of generating and sharing daily company summary reports. The automation retrieves contact data from an Airtable base, generates company summaries (simulated ChatGPT output), creates a Google Doc with the summaries, and sends a notification with the document link to a Slack channel every day at 7:00 AM. This project is designed to demonstrate efficient workflow automation for business reporting.
-
