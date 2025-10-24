@@ -9,7 +9,6 @@ Repository Structure
 
 - Task 3: Slack Bot ("Report Bot") integrated with Make.com to send weekly reports to a private Slack channel.
 
-
 ##### Reports: Documentation for each task is included in the docs/ directory:
 
 - YouTube_Scraper_Report.md
