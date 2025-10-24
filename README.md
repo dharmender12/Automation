@@ -6,7 +6,7 @@ Repository Structure
 - Task 1: Automation in Make.com to generate random contacts in Airtable, create a company summary using ChatGPT, store it in a Google Doc, and send a daily report to a Slack channel.
 
 - Task 2: YouTube Scraper to extract video details and store them in JSON, Excel, and Google Sheets.
-  
+
 - Task 3: Slack Bot ("Report Bot") integrated with Make.com to send weekly reports to a private Slack channel.
 
 
